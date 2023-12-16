@@ -1,3 +1,10 @@
+/*
+Name: Ben Miller, Luke Shepard
+UNR CPE 301 Final Project
+Date: 12/15/2023
+*/
+
+//declared pin definitions
 #include <LiquidCrystal.h>
 #include <DHT.h>
 #include <Stepper.h>
@@ -10,6 +17,7 @@
 #define STEPPER_ENABLE_PIN 53
 #define STEPPER_DIRECTION_PIN 52
 
+//pointer definitions
 volatile unsigned int currentTicks = 65535;
 
 volatile unsigned char* pin_a = (unsigned char*) 0x20;
