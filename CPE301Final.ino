@@ -4,7 +4,7 @@ UNR CPE 301 Final Project
 Date: 12/15/2023
 */
 
-//library decleration and pin definitions
+//library declaration and pin definitions
 #include <LiquidCrystal.h>
 #include <DHT.h>
 #include <Stepper.h>
@@ -20,7 +20,7 @@ Date: 12/15/2023
 #define STEPPER_ENABLE_PIN 53
 #define STEPPER_DIRECTION_PIN 52
 
-//pointer defenitions
+//pointer definitions
 volatile unsigned int currentTicks = 65535;
 volatile unsigned char* pin_a = (unsigned char*) 0x20;
 volatile unsigned char* ddr_a  = (unsigned char*) 0x21; 
@@ -68,8 +68,8 @@ volatile unsigned char* analogPort_A5 = (unsigned char*) 0x67;
 volatile unsigned char* analogPin_A5 = (unsigned char*) 0x68;
 volatile unsigned char* analogDdr_A5  = (unsigned char*) 0x66;
 
-const int rs = 12, en = 11, d4 = 22, d5 = 24, d6 = 26, d7 = 28;
-LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+const int RS = 12, E = 11, D4 = 22, D5 = 24, D6 = 26, D7 = 28;
+LiquidCrystal lcd(RS, E, D4, D5, D6, D7);
 
 DHT dht(DHT_PIN, DHT_TYPE);
 
@@ -109,7 +109,7 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.print("Temp: ");
   lcd.print(temp);
-  lcd.print(" F");
+  lcd.print("F");
 
   lcd.setCursor(0, 1);
   lcd.print("Humidity: ");
